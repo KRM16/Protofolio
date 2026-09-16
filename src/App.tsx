@@ -23,7 +23,7 @@ const projects = [
       'A real-time movie browser built around a public API, with browseable listings, detailed film pages, and a focused AI assistant for movie questions.',
     tags: ['React', 'JavaScript', 'n8n', 'Postman'],
     accent: '#729B79',
-    image:"/public/images/movie-project.jpg"
+    image: "/images/movie-project.jpg"
   },
   {
     number: '02',
@@ -33,8 +33,7 @@ const projects = [
       'A considered furniture storefront with product listing pages and interactive UI components designed to make browsing feel effortless.',
     tags: ['HTML', 'JavaScript', 'Bootstrap'],
     accent: '#475B63',
-        image:"/public/images/comforty-project.jpg"
-
+    image: "/images/comforty-project.jpg"
   },
   {
     number: '03',
@@ -44,8 +43,7 @@ const projects = [
       'A welcoming restaurant website covering menu and information pages with a fully responsive layout across every screen size.',
     tags: ['React', 'Tailwind CSS'],
     accent: '#A96D59',
-        image:"/public/images/gericht-project.jpg"
-
+    image: "/images/gericht-project.jpg"
   },
 ];
 
@@ -141,12 +139,11 @@ function App() {
               Crafting with care
             </div>
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] bg-[#BACDB0] shadow-2xl shadow-[#475B63]/15">
-              {/* ADD HERO IMAGE HERE */}
               <img 
-    src="/public/images/personal-photo.png" 
-    alt="Kareem Abdelsalam" 
-    className="h-full w-full object-cover"
-  />
+                src="/images/personal-photo.png" 
+                alt="Kareem Abdelsalam" 
+                className="h-full w-full object-cover"
+              />
               <div className="absolute inset-6 rounded-[2rem] border border-[#2E2C2F]/15" />
               <div className="absolute bottom-8 left-8 right-8 rounded-2xl bg-[#F3E8EE]/90 p-5 backdrop-blur-sm">
                 <p className="font-display text-2xl font-bold tracking-[-0.04em]">Kareem Abdelsalam</p>
@@ -162,102 +159,95 @@ function App() {
         </section>
 
       <section id="about" className="border-y border-[#2E2C2F]/10 bg-[#BACDB0]/35">
-  <div className="mx-auto grid max-w-7xl gap-12 px-5 py-24 sm:px-8 lg:grid-cols-[.82fr_1.18fr] lg:items-center lg:gap-24 lg:px-12 lg:py-32">
-    
-    <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.25 }} variants={reveal} className="relative mx-auto w-full max-w-md">
-      
-      {/* هنا الكونتينر المربع اللي شايل الصورة */}
-      <div className="relative aspect-square overflow-hidden rounded-[2rem] bg-[#729B79] p-5 shadow-xl shadow-[#475B63]/10">
-        
-        {/* الصورة واخدة absolute عشان تملى الخلفية كلها */}
-        <img 
-          src="/images/AnotherPhoto.png" 
-          alt="Kareem Abdelsalam" 
-          className="absolute inset-0 h-full w-full object-cover"
-        />
+        <div className="mx-auto grid max-w-7xl gap-12 px-5 py-24 sm:px-8 lg:grid-cols-[.82fr_1.18fr] lg:items-center lg:gap-24 lg:px-12 lg:py-32">
+          
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.25 }} variants={reveal} className="relative mx-auto w-full max-w-md">
+            <div className="relative aspect-square overflow-hidden rounded-[2rem] bg-[#729B79] p-5 shadow-xl shadow-[#475B63]/10">
+              <img 
+                src="/images/AnotherPhoto.png" 
+                alt="Kareem Abdelsalam" 
+                className="absolute inset-0 h-full w-full object-cover"
+              />
 
-        {/* الإطار اللي جواه كلمة Based in Egypt، واخد relative و z-10 عشان يبقى فوق الصورة */}
-        <div className="relative z-10 flex h-full items-end rounded-[1.4rem] border border-[#F3E8EE]/40 bg-[#729B79]/10 p-5">
-          <span className="rounded-full bg-[#F3E8EE] px-4 py-2 text-xs font-bold uppercase tracking-widest text-[#475B63]">
-            Based in Egypt
-          </span>
+              <div className="relative z-10 flex h-full items-end rounded-[1.4rem] border border-[#F3E8EE]/40 bg-[#729B79]/10 p-5">
+                <span className="rounded-full bg-[#F3E8EE] px-4 py-2 text-xs font-bold uppercase tracking-widest text-[#475B63]">
+                  Based in Egypt
+                </span>
+              </div>
+            </div>
+            
+            <div className="absolute -bottom-6 -right-5 flex h-24 w-24 rotate-6 items-center justify-center rounded-full bg-[#2E2C2F] text-center text-[10px] font-bold uppercase tracking-widest text-[#F3E8EE] shadow-xl">
+              Always<br />learning
+            </div>
+          </motion.div>
+
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.25 }} variants={reveal}>
+            <p className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-[#729B79]">A little about me</p>
+            <h2 className="max-w-xl font-display text-4xl font-bold leading-tight tracking-[-0.055em] sm:text-5xl">
+              I care about how a product <span className="text-[#729B79]">feels.</span>
+            </h2>
+            <div className="mt-7 max-w-2xl space-y-5 text-base leading-8 text-[#475B63]">
+              <p>I&apos;m an entry-level frontend developer with a strong foundation in React, JavaScript, and REST API integration. I enjoy building complete web experiences, from a clean first interaction to the details that make a page feel effortless.</p>
+              <p>Currently studying Information Systems at Mansoura University, I&apos;m always looking for the next problem to untangle and the next useful thing to learn.</p>
+            </div>
+            <div className="mt-9 flex flex-wrap gap-2">
+              {['React', 'JavaScript', 'Tailwind CSS', 'REST APIs', 'Git'].map((skill) => (
+                <span key={skill} className="rounded-full border border-[#475B63]/25 px-4 py-2 text-xs font-bold text-[#475B63]">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </motion.div>
+
         </div>
-      </div>
-      
-      <div className="absolute -bottom-6 -right-5 flex h-24 w-24 rotate-6 items-center justify-center rounded-full bg-[#2E2C2F] text-center text-[10px] font-bold uppercase tracking-widest text-[#F3E8EE] shadow-xl">
-        Always<br />learning
-      </div>
-    </motion.div>
-
-    <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.25 }} variants={reveal}>
-      <p className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-[#729B79]">A little about me</p>
-      <h2 className="max-w-xl font-display text-4xl font-bold leading-tight tracking-[-0.055em] sm:text-5xl">
-        I care about how a product <span className="text-[#729B79]">feels.</span>
-      </h2>
-      <div className="mt-7 max-w-2xl space-y-5 text-base leading-8 text-[#475B63]">
-        <p>I&apos;m an entry-level frontend developer with a strong foundation in React, JavaScript, and REST API integration. I enjoy building complete web experiences, from a clean first interaction to the details that make a page feel effortless.</p>
-        <p>Currently studying Information Systems at Mansoura University, I&apos;m always looking for the next problem to untangle and the next useful thing to learn.</p>
-      </div>
-      <div className="mt-9 flex flex-wrap gap-2">
-        {['React', 'JavaScript', 'Tailwind CSS', 'REST APIs', 'Git'].map((skill) => (
-          <span key={skill} className="rounded-full border border-[#475B63]/25 px-4 py-2 text-xs font-bold text-[#475B63]">
-            {skill}
-          </span>
-        ))}
-      </div>
-    </motion.div>
-
-  </div>
-</section>
+      </section>
 
        <section id="projects" className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-12 lg:py-32">
-  <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={reveal} className="mb-14 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
-    <div>
-      <p className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-[#729B79]">Selected work</p>
-      <h2 className="font-display text-4xl font-bold tracking-[-0.055em] sm:text-6xl">A few things I&apos;ve built.</h2>
-    </div>
-    <p className="max-w-xs text-sm leading-6 text-[#475B63]">Thoughtful interfaces, practical systems, and a little bit of curiosity in every project.</p>
-  </motion.div>
-  
-  <div className="grid gap-6 lg:grid-cols-3">
-    {projects.map((project, index) => (
-      <motion.article key={project.title} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={reveal} transition={{ delay: index * 0.1 }} className="group overflow-hidden rounded-[2rem] border border-[#2E2C2F]/10 bg-[#BACDB0]/40 transition-all hover:-translate-y-2 hover:shadow-xl hover:shadow-[#475B63]/10">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={reveal} className="mb-14 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+          <div>
+            <p className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-[#729B79]">Selected work</p>
+            <h2 className="font-display text-4xl font-bold tracking-[-0.055em] sm:text-6xl">A few things I&apos;ve built.</h2>
+          </div>
+          <p className="max-w-xs text-sm leading-6 text-[#475B63]">Thoughtful interfaces, practical systems, and a little bit of curiosity in every project.</p>
+        </motion.div>
         
-        <div className="relative aspect-[1.12/1] overflow-hidden p-5" style={{ backgroundColor: project.accent }}>
-          
-          {/* هنا خلينا مسار الصورة ديناميك، وادينالها absolute عشان تفرد في الخلفية */}
-          <img 
-            src={project.image} 
-            alt={project.title} 
-            className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-          />
-          
-          {/* ادينا للكونتينر ده relative z-10 عشان رقم البروجكت يظهر فوق الصورة */}
-          <div className="relative z-10 flex h-full items-end rounded-[1.35rem] border border-[#F3E8EE]/25 bg-black/10 p-5 transition-transform duration-500 group-hover:scale-105">
-            <span className="font-display text-7xl font-bold text-[#F3E8EE]/80">{project.number}</span>
-          </div>
-          
-          <span className="absolute right-8 top-8 z-10 rounded-full bg-[#F3E8EE]/90 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-[#2E2C2F]">
-            {project.type}
-          </span>
+        <div className="grid gap-6 lg:grid-cols-3">
+          {projects.map((project, index) => (
+            <motion.article key={project.title} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={reveal} transition={{ delay: index * 0.1 }} className="group overflow-hidden rounded-[2rem] border border-[#2E2C2F]/10 bg-[#BACDB0]/40 transition-all hover:-translate-y-2 hover:shadow-xl hover:shadow-[#475B63]/10">
+              
+              <div className="relative aspect-[1.12/1] overflow-hidden p-5" style={{ backgroundColor: project.accent }}>
+                
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                
+                <div className="relative z-10 flex h-full items-end rounded-[1.35rem] border border-[#F3E8EE]/25 bg-black/10 p-5 transition-transform duration-500 group-hover:scale-105">
+                  <span className="font-display text-7xl font-bold text-[#F3E8EE]/80">{project.number}</span>
+                </div>
+                
+                <span className="absolute right-8 top-8 z-10 rounded-full bg-[#F3E8EE]/90 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-[#2E2C2F]">
+                  {project.type}
+                </span>
+              </div>
+              
+              <div className="p-6">
+                <div className="mb-4 flex items-start justify-between gap-4">
+                  <h3 className="font-display text-2xl font-bold tracking-[-0.04em]">{project.title}</h3>
+                  <ArrowUpRight size={19} className="shrink-0 text-[#729B79] transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                </div>
+                <p className="min-h-[100px] text-sm leading-6 text-[#475B63]">{project.description}</p>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <span key={tag} className="text-xs font-bold text-[#729B79]">#{tag.replace(' ', '')}</span>
+                  ))}
+                </div>
+              </div>
+            </motion.article>
+          ))}
         </div>
-        
-        <div className="p-6">
-          <div className="mb-4 flex items-start justify-between gap-4">
-            <h3 className="font-display text-2xl font-bold tracking-[-0.04em]">{project.title}</h3>
-            <ArrowUpRight size={19} className="shrink-0 text-[#729B79] transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-          </div>
-          <p className="min-h-[100px] text-sm leading-6 text-[#475B63]">{project.description}</p>
-          <div className="mt-5 flex flex-wrap gap-2">
-            {project.tags.map((tag) => (
-              <span key={tag} className="text-xs font-bold text-[#729B79]">#{tag.replace(' ', '')}</span>
-            ))}
-          </div>
-        </div>
-      </motion.article>
-    ))}
-  </div>
-</section>
+      </section>
 
         <section id="experience" className="bg-[#2E2C2F] text-[#F3E8EE]">
           <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:px-12 lg:py-28"><div className="grid gap-14 lg:grid-cols-[.7fr_1.3fr] lg:gap-24"><div><p className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-[#BACDB0]">Experience & education</p><h2 className="font-display text-4xl font-bold leading-tight tracking-[-0.055em] sm:text-5xl">Growing through <span className="text-[#729B79]">practice.</span></h2></div><div className="divide-y divide-[#F3E8EE]/15">{[['Frontend Web Development Trainee', 'Digital Egypt Pioneers Initiative (DEPI)', 'Jul 2026 — Feb 2027'], ['Web Development Trainee', 'Information Technology Institute (ITI)', 'Aug 2026 — Sep 2026'], ['B.Sc. Information Systems', 'Mansoura University', '2023 — 2027']].map(([title, place, date]) => <div key={title} className="grid gap-2 py-6 sm:grid-cols-[1fr_auto] sm:gap-8"><div><h3 className="font-display text-xl font-bold">{title}</h3><p className="mt-1 text-sm text-[#BACDB0]">{place}</p></div><p className="text-sm text-[#F3E8EE]/55 sm:pt-1">{date}</p></div>)}</div></div></div>
